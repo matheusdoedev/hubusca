@@ -21,6 +21,11 @@ const Seo: React.FC<SEOProps> = ({ title, description, lang }) => {
         <title>
           {title} - {siteMetadata.title}
         </title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Jura:wght@600;700&family=Roboto&display=swap"
+          rel="stylesheet"
+        />
       </Head>
     </html>
   );
