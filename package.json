@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "next": "10.1.3",
     "node-sass": "^5.0.0",
     "react": "17.0.2",
