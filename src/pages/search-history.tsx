@@ -5,7 +5,7 @@ import Seo from "../components/SEO/SEO";
 export default function SearchHistoryPage() {
   return (
     <>
-      <Seo title="Histórico" />
+      <Seo title="Histórico" description="Histórico de busca" />
 
       <SearchHistory />
       <Footer />
