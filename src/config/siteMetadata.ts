@@ -4,4 +4,5 @@ export const siteMetadata = {
   author: `@matheusdoedev`,
   keywords: "HUB, Github, search, busca, usuário, user, matheusdoedev",
   type: "Website",
+  lang: "pt-BR",
 };
