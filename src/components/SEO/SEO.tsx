@@ -6,9 +6,10 @@ import { SEOProps } from "./SEO.interface";
 
 const Seo: React.FC<SEOProps> = ({ title, description, lang }) => {
   const metaDescription = description || siteMetadata.description;
+  const metaLang = lang || siteMetadata.lang;
 
   return (
-    <html lang={lang}>
+    <html lang={metaLang}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:type" content={siteMetadata.type} />
