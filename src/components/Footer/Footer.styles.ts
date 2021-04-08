@@ -16,6 +16,23 @@ export const FooterNavMenu = styled.ul`
   justify-content: center;
 `;
 
+export const FooterNavItem = styled.li`
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child):after {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 4px;
+    border-radius: 50%;
+    background: white;
+    opacity: 0.4;
+    margin-left: var(--gap-xs);
+    margin-right: var(--gap-xs);
+  }
+`;
+
 export const FooterNavLink = styled.a`
   color: white;
   transition: 0.3s;
@@ -26,23 +43,6 @@ export const FooterNavLink = styled.a`
     color: ${colors.primary};
     transition: 0.3s;
   }
-
-  /* &:after {
-    content: "";
-    display: inline-block;
-    width: 5px;
-    height: 4px;
-    border-radius: 50%;
-    background: white;
-    opacity: 0.4;
-    margin-left: var(--gap-xs);
-  }
-
-  & ~ & {
-    &:after {
-      display: none;
-    }
-  } */
 `;
 
 export const FooterCopy = styled.p`

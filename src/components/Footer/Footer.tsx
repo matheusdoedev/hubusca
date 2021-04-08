@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Container, Row } from "react-bootstrap";
 
 import * as F from "./Footer.styles";
+
 import withData from "./Footer.withData";
 
 function Footer({ navLinks }) {
@@ -12,11 +13,11 @@ function Footer({ navLinks }) {
           <F.FooterNav className="col-xs-12">
             <F.FooterNavMenu>
               {navLinks.map(({ path, label }, index) => (
-                <li key={index} title={label}>
+                <F.FooterNavItem key={index} title={label}>
                   <Link href={path}>
                     <F.FooterNavLink title={label}>{label}</F.FooterNavLink>
                   </Link>
-                </li>
+                </F.FooterNavItem>
               ))}
             </F.FooterNavMenu>
           </F.FooterNav>

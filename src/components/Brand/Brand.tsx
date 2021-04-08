@@ -1,10 +1,11 @@
 import Link from "next/link";
-import Image from "next/image";
+
+import * as B from "./Brand.styles";
 
 export default function Brand() {
   return (
     <Link href="/">
-      <Image
+      <B.BrandBlock
         src="/assets/brand.svg"
         alt="HUBusca"
         title="HUBusca"

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { colors } from "../../styles/settings/colors";
 
 export const InputBlock = styled.div`
@@ -15,7 +16,8 @@ export const InputLabel = styled.label`
 
 export const InputField = styled.input`
   padding: var(--gap-xs);
-  color: ${colors.secondary};
+  background: ${colors.secondary2};
+  color: white;
   width: 100%;
   border: none;
   border-radius: 3px;
