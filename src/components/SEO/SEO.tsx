@@ -19,6 +19,7 @@ const Seo: React.FC<SEOProps> = ({ title, description, lang }) => {
         <meta property="og:description" content={metaDescription} />
         <meta name="keywords" content={siteMetadata.keywords} />
         <meta name="description" content={metaDescription} />
+        <link rel="icon" href="/favicon.png" />
         <title>
           {title} - {siteMetadata.title}
         </title>
