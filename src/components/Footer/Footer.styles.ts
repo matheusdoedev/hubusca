@@ -43,6 +43,10 @@ export const FooterNavLink = styled.a`
     color: ${colors.primary};
     transition: 0.3s;
   }
+
+  &.active {
+    color: ${colors.primary};
+  }
 `;
 
 export const FooterCopy = styled.p`
