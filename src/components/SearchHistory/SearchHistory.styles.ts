@@ -14,3 +14,23 @@ export const SearchHistoryTitle = styled.h1`
   margin-bottom: var(--gap-lg);
   text-align: center;
 `;
+
+export const SearchHistoryAdvise = styled.span`
+  color: white;
+  text-align: center;
+  opacity: 0.75;
+`;
+
+export const SearchHistoryBackLink = styled.a`
+  color: white;
+  text-align: center;
+  opacity: 0.95;
+  text-decoration: underline;
+  transition: 0.3s;
+
+  &:hover {
+    color: ${colors.primary};
+    transition: 0.3s;
+    text-decoration: underline;
+  }
+`;
