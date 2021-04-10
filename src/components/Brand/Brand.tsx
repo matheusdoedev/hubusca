@@ -9,10 +9,8 @@ export default function Brand() {
         src="/assets/brand.svg"
         alt="HUBusca"
         title="HUBusca"
-        className="brand__img"
         width={170}
         height={17}
-        layout="fixed"
       />
     </Link>
   );

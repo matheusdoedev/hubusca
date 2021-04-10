@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { Container, Row, Col } from "react-bootstrap";
 
 import Brand from "../Brand/Brand";
@@ -8,6 +9,8 @@ import * as N from "./Navbar.styles";
 import withData from "./Navbar.withData";
 
 function Navbar({ navLinks }) {
+  const { pathname } = useRouter();
+
   return (
     <N.Navbar>
       <Container>
@@ -24,7 +27,12 @@ function Navbar({ navLinks }) {
               {navLinks.map(({ path, label }, index) => (
                 <li key={index} title={label}>
                   <Link href={path}>
-                    <N.NavbarMenuLink title={label}>{label}</N.NavbarMenuLink>
+                    <N.NavbarMenuLink
+                      className={pathname === path && "active"}
+                      title={label}
+                    >
+                      {label}
+                    </N.NavbarMenuLink>
                   </Link>
                 </li>
               ))}

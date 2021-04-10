@@ -1,8 +1,8 @@
-import { InputHTMLAttributes } from "react";
+import { InputHTMLAttributes, Dispatch, SetStateAction } from "react";
 
 export interface InputData extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
   label?: string;
-  setValue?: any;
+  setValue?: Dispatch<SetStateAction<string>>;
   info?: string;
 }

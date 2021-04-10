@@ -15,15 +15,21 @@ export const InputLabel = styled.label`
 `;
 
 export const InputField = styled.input`
-  padding: var(--gap-xs);
+  padding: calc(var(--gap-xs) - 1px);
   background: ${colors.secondary2};
   color: white;
   width: 100%;
-  border: none;
+  border: 1px solid transparent !important;
+  outline: none;
   border-radius: 3px;
 
   &:focus {
     filter: brightness(90%);
+    border: 1px solid ${colors.primary} !important;
+  }
+
+  &.error {
+    border: 1px solid var(--danger) !important;
   }
 `;
 

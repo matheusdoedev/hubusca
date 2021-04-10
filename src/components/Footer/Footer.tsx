@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { Container, Row } from "react-bootstrap";
 
 import * as F from "./Footer.styles";
@@ -6,6 +7,8 @@ import * as F from "./Footer.styles";
 import withData from "./Footer.withData";
 
 function Footer({ navLinks }) {
+  const { pathname } = useRouter();
+
   return (
     <F.FooterBlock>
       <Container>
@@ -15,7 +18,12 @@ function Footer({ navLinks }) {
               {navLinks.map(({ path, label }, index) => (
                 <F.FooterNavItem key={index} title={label}>
                   <Link href={path}>
-                    <F.FooterNavLink title={label}>{label}</F.FooterNavLink>
+                    <F.FooterNavLink
+                      className={pathname === path && "active"}
+                      title={label}
+                    >
+                      {label}
+                    </F.FooterNavLink>
                   </Link>
                 </F.FooterNavItem>
               ))}

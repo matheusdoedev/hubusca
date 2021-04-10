@@ -12,7 +12,13 @@ const Input: React.FC<InputData> = ({
 }) => {
   return (
     <I.InputBlock title={label}>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
         {label && (
           <I.InputLabel htmlFor={name} title={label}>
             {label}
@@ -22,6 +28,7 @@ const Input: React.FC<InputData> = ({
       </div>
       <I.InputField
         id={name}
+        className={info ? "error" : ""}
         name={name}
         value={value}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>

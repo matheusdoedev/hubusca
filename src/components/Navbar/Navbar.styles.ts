@@ -34,4 +34,8 @@ export const NavbarMenuLink = styled.a`
     color: ${colors.primary};
     transition: 0.3s;
   }
+
+  &.active {
+    color: ${colors.primary};
+  }
 `;

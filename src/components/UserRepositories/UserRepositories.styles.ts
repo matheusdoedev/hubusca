@@ -9,3 +9,9 @@ export const UserRepositoriesTitle = styled.h2`
   color: white;
   text-align: center;
 `;
+
+export const SearchHistoryAdvise = styled.span`
+  color: white;
+  text-align: center;
+  opacity: 0.75;
+`;
