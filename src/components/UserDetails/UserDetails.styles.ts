@@ -15,6 +15,10 @@ export const UserDetailsTitle = styled.h1`
   text-align: center;
 `;
 
+export const UserDetailsAvatar = styled.img`
+  border-radius: 3px;
+`;
+
 export const UserDetailsInfos = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;

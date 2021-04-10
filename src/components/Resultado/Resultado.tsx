@@ -1,13 +1,20 @@
+import { useContext } from "react";
+
 import { Container, Row, Col } from "react-bootstrap";
 
 import CardUser from "../CardUser/CardUser";
 import SearchForm from "../SearchForm/SearchForm";
+import Loading from "../Loading/Loading";
 
 import * as R from "./Resultado.styles";
 
+import { UserContext } from "../../data/contexts/UserContext";
+
 export default function Resultado() {
+  const userContext = useContext(UserContext);
+
   return (
-    <R.ResultadoBlock title="Resultado da pesquisa">
+    <R.ResultadoBlock id="resultado" title="Resultado da pesquisa">
       <Container>
         <Row>
           <Col
@@ -20,12 +27,21 @@ export default function Resultado() {
             }}
           >
             <R.ResultadoTitle>Resultado</R.ResultadoTitle>
-            <CardUser />
-            <R.ResultadoOu>ou</R.ResultadoOu>
+            {userContext?.status === "LOADING" ? (
+              <Loading />
+            ) : (
+              userContext?.user && (
+                <>
+                  <CardUser user={userContext.user} />
+                  <R.ResultadoOu>ou</R.ResultadoOu>
+                </>
+              )
+            )}
+
             <R.ResultadoPesquiseOutroUsuario>
-              Pesquise outro usuário
+              Pesquise um usuário
             </R.ResultadoPesquiseOutroUsuario>
-            <SearchForm />
+            <SearchForm error={userContext?.error} />
           </Col>
         </Row>
       </Container>

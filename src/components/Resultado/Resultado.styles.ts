@@ -15,7 +15,7 @@ export const ResultadoTitle = styled.h2`
 
 export const ResultadoPesquiseOutroUsuario = styled.h3`
   color: white;
-  margin-bottom: var(--gap-sm);
+  margin-bottom: var(--gap-md);
 `;
 
 export const ResultadoOu = styled.span`
