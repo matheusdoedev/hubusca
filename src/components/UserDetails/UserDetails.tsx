@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import { useRouter } from "next/router";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -25,7 +24,7 @@ export default function UserDetails() {
           </Col>
         </Row>
         <Row>
-          <Col xs={12} sm={4}>
+          <Col xs={12} md={4}>
             <U.UserDetailsAvatar
               src={user?.avatar_url}
               alt={user?.name}

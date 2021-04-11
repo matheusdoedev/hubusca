@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { colors } from "../../styles/settings/colors";
+import { hover } from "../../styles/trumps/hover";
 
 export const FooterBlock = styled.footer`
   padding: var(--gap-lg) 0;
@@ -35,14 +36,10 @@ export const FooterNavItem = styled.li`
 
 export const FooterNavLink = styled.a`
   color: white;
-  transition: 0.3s;
   display: flex;
   align-items: center;
 
-  &:hover {
-    color: ${colors.primary};
-    transition: 0.3s;
-  }
+  ${hover.link}
 
   &.active {
     color: ${colors.primary};
@@ -55,4 +52,10 @@ export const FooterCopy = styled.p`
   text-align: center;
   font-size: 0.875rem;
   max-width: 100%;
+`;
+
+export const FooterCopyLink = styled.a`
+  color: white;
+
+  ${hover.link}
 `;

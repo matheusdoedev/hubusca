@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { colors } from "../../styles/settings/colors";
+import { breakpoints } from "../../styles/tools/breakpoints";
 
 export const UserDetailsBlock = styled.main`
   background: ${colors.gradient};
@@ -17,6 +18,10 @@ export const UserDetailsTitle = styled.h1`
 
 export const UserDetailsAvatar = styled.img`
   border-radius: 3px;
+
+  @media (max-width: ${breakpoints.md}) {
+    margin-bottom: var(--gap-md);
+  }
 `;
 
 export const UserDetailsInfos = styled.section`

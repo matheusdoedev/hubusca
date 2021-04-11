@@ -1,14 +1,14 @@
-import { useContext } from "react";
-
+import { useContext, lazy, Suspense } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
-import CardUser from "../CardUser/CardUser";
 import SearchForm from "../SearchForm/SearchForm";
 import Loading from "../Loading/Loading";
 
+import { UserContext } from "../../data/contexts/UserContext";
+
 import * as R from "./Resultado.styles";
 
-import { UserContext } from "../../data/contexts/UserContext";
+const CardUser = lazy(() => import("../CardUser/CardUser"));
 
 export default function Resultado() {
   const userContext = useContext(UserContext);
@@ -19,29 +19,28 @@ export default function Resultado() {
         <Row>
           <Col
             sm={12}
-            md={{ offset: 3, span: 6 }}
+            lg={{ offset: 2, span: 8 }}
+            xl={{ offset: 3, span: 6 }}
             style={{
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
             }}
           >
-            <R.ResultadoTitle>Resultado</R.ResultadoTitle>
+            <R.ResultadoTitle>Pesquise um usuário</R.ResultadoTitle>
+            <SearchForm error={userContext?.error} />
             {userContext?.status === "LOADING" ? (
               <Loading />
             ) : (
               userContext?.user && (
                 <>
-                  <CardUser user={userContext.user} />
-                  <R.ResultadoOu>ou</R.ResultadoOu>
+                  <R.ResultadoField>Resultado</R.ResultadoField>
+                  <Suspense fallback={<Loading />}>
+                    <CardUser user={userContext.user} />
+                  </Suspense>
                 </>
               )
             )}
-
-            <R.ResultadoPesquiseOutroUsuario>
-              Pesquise um usuário
-            </R.ResultadoPesquiseOutroUsuario>
-            <SearchForm error={userContext?.error} />
           </Col>
         </Row>
       </Container>

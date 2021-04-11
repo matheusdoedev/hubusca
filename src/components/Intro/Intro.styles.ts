@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import bgImg from "../../../public/assets/intro-bg.jpg";
+import { border } from "../../styles/trumps/border";
 
 export const Intro = styled.main`
   min-height: 100vh;
@@ -16,10 +17,11 @@ export const IntroTitle = styled.h1`
     display: block;
     width: 80px;
     height: 1px;
-    border-radius: 3px;
     background: white;
     opacity: 0.2;
     margin: var(--gap-md) 0;
+
+    ${border.radius}
   }
 `;
 

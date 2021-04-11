@@ -10,11 +10,12 @@ export const ResultadoBlock = styled.section`
 
 export const ResultadoTitle = styled.h2`
   color: white;
-  margin-bottom: var(--gap-lg);
+  margin-bottom: var(--gap-md);
 `;
 
-export const ResultadoPesquiseOutroUsuario = styled.h3`
+export const ResultadoField = styled.h3`
   color: white;
+  margin-top: var(--gap-lg);
   margin-bottom: var(--gap-md);
 `;
 

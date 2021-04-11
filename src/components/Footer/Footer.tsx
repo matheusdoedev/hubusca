@@ -10,7 +10,7 @@ function Footer({ navLinks }) {
   const { pathname } = useRouter();
 
   return (
-    <F.FooterBlock>
+    <F.FooterBlock title="Rodapé">
       <Container>
         <Row className="justify-content-center">
           <F.FooterNav className="col-xs-12">
@@ -31,8 +31,16 @@ function Footer({ navLinks }) {
           </F.FooterNav>
         </Row>
         <Row className="justify-content-center">
-          <F.FooterCopy className="col-xs-12">
-            HUBusca 2021 @ Todos os direitos reservados. Feito por matheusdoedev
+          <F.FooterCopy className="col-12">
+            HUBusca 2021 @ Todos os direitos reservados. Feito por
+            <a
+              href="https://matheusdoe.com"
+              target="BLANK"
+              style={{ color: "white" }}
+              title="matheusdoedev"
+            >
+              matheusdoedev
+            </a>
           </F.FooterCopy>
         </Row>
       </Container>

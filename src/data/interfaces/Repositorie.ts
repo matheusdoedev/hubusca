@@ -3,7 +3,7 @@ export interface IRepositorie {
   name: string;
   html_url: string;
   description: string;
-  create_at: string;
+  created_at: string;
   updated_at: string;
   pushed_at: string;
   language: string;

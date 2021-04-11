@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
 import { colors } from "../../styles/settings/colors";
+import { border } from "../../styles/trumps/border";
+import { hover } from "../../styles/trumps/hover";
 
 export const ButtonBlock = styled.button`
   background: ${colors.primary};
-  border-radius: 3px;
   padding: var(--gap-xs) var(--gap-sm);
-  transition: 0.3s;
-
-  &:hover {
-    background: ${colors.support};
-    transition: 0.3s;
-  }
+  ${border.radius};
+  ${hover.button};
 `;
