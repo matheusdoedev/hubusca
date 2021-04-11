@@ -2,24 +2,21 @@ import styled from "styled-components";
 
 import { colors } from "../../styles/settings/colors";
 import { breakpoints } from "../../styles/tools/breakpoints";
+import { border } from "../../styles/trumps/border";
+import { hover } from "../../styles/trumps/hover";
 
 export const CardUserBlock = styled.article`
   background: ${colors.secondary2};
-  border-radius: 3px;
   width: 100%;
   padding: calc(var(--gap-md) - 1px);
   border: 1px solid white;
-  transition: 0.3s;
 
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: var(--gap-sm);
 
-  &:hover {
-    border: 1px solid ${colors.primary};
-    cursor: pointer;
-    transition: 0.3s;
-  }
+  ${border.radius}
+  ${hover.card}
 
   @media (max-width: ${breakpoints.sm}) {
     display: flex;

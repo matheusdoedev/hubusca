@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { colors } from "../../styles/settings/colors";
+import { border } from "../../styles/trumps/border";
 
 export const InputBlock = styled.div`
   display: flex;
@@ -21,7 +22,8 @@ export const InputField = styled.input`
   width: 100%;
   border: 1px solid transparent !important;
   outline: none;
-  border-radius: 3px;
+
+  ${border.radius}
 
   &:focus {
     filter: brightness(90%);

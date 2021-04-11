@@ -2,12 +2,10 @@ import * as B from "./Button.styles";
 
 import { IButtonData } from "./Button.interface";
 
-const Button: React.FC<IButtonData> = ({ content, ...props }) => {
+export default function Button(props: IButtonData) {
   return (
-    <B.ButtonBlock title={content} {...props}>
-      {content}
+    <B.ButtonBlock title={props.content} {...props}>
+      {props.content}
     </B.ButtonBlock>
   );
-};
-
-export default Button;
+}

@@ -12,7 +12,7 @@ export default function Intro() {
   const userContext = useContext(UserContext);
 
   return (
-    <I.Intro>
+    <I.Intro title="Introdução">
       <Navbar />
       <Container>
         <Row style={{ height: "80vh", alignItems: "center" }}>

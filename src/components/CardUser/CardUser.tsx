@@ -4,34 +4,36 @@ import { IUser } from "../../data/interfaces/User";
 
 import * as C from "./CardUser.styles";
 
-const CardUser: React.FC<{ user: IUser }> = ({ user }) => {
+export default function CardUser(props: { user: IUser }) {
   return (
-    <Link href={`/user/${user.login}`}>
-      <C.CardUserBlock>
-        <C.CardUserAvatar src={user.avatar_url} alt="User" title="User" />
+    <Link href={`/user/${props.user?.login}`}>
+      <C.CardUserBlock title={props.user?.name}>
+        <C.CardUserAvatar
+          src={props.user?.avatar_url}
+          alt="User"
+          title={props.user?.name}
+        />
         <C.CardUserContent>
           <C.CardUserContentInfo>
             <C.CardUserContentInfoSpan>Nome</C.CardUserContentInfoSpan>
             <C.CardUserContentInfoContent>
-              {user.name}
+              {props.user?.name}
             </C.CardUserContentInfoContent>
           </C.CardUserContentInfo>
           <C.CardUserContentInfo>
             <C.CardUserContentInfoSpan>Usuário</C.CardUserContentInfoSpan>
             <C.CardUserContentInfoContent>
-              {user.login}
+              {props.user?.login}
             </C.CardUserContentInfoContent>
           </C.CardUserContentInfo>
           <C.CardUserContentInfo>
             <C.CardUserContentInfoSpan>Localização</C.CardUserContentInfoSpan>
             <C.CardUserContentInfoContent>
-              {user.location}
+              {props.user?.location}
             </C.CardUserContentInfoContent>
           </C.CardUserContentInfo>
         </C.CardUserContent>
       </C.CardUserBlock>
     </Link>
   );
-};
-
-export default CardUser;
+}

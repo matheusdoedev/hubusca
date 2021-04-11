@@ -2,16 +2,9 @@ import * as I from "./Input.styles";
 
 import { InputData } from "./Input.interface";
 
-const Input: React.FC<InputData> = ({
-  name,
-  label,
-  value,
-  setValue,
-  info,
-  ...props
-}) => {
+export default function Input(props: InputData) {
   return (
-    <I.InputBlock title={label}>
+    <I.InputBlock title={props.label}>
       <div
         style={{
           display: "flex",
@@ -19,26 +12,26 @@ const Input: React.FC<InputData> = ({
           alignItems: "center",
         }}
       >
-        {label && (
-          <I.InputLabel htmlFor={name} title={label}>
-            {label}
+        {props.label && (
+          <I.InputLabel htmlFor={props.name} title={props.label}>
+            {props.label}
           </I.InputLabel>
         )}
-        {info && <I.InputInfo title={info}>{info}</I.InputInfo>}
+        {props.info && (
+          <I.InputInfo title={props.info}>{props.info}</I.InputInfo>
+        )}
       </div>
       <I.InputField
-        id={name}
-        className={info ? "error" : ""}
-        name={name}
-        value={value}
+        id={props.name}
+        className={props.info ? "error" : ""}
+        name={props.name}
+        value={props.value}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          setValue(e.target.value)
+          props.setValue(e.target.value)
         }
-        title={label}
+        title={props.label}
         {...props}
       />
     </I.InputBlock>
   );
-};
-
-export default Input;
+}

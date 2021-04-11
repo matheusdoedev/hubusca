@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 import { colors } from "../../styles/settings/colors";
 import { breakpoints } from "../../styles/tools/breakpoints";
+import { border } from "../../styles/trumps/border";
+import { hover } from "../../styles/trumps/hover";
 
 export const Navbar = styled.header`
   padding-top: var(--gap-sm);
@@ -26,7 +28,7 @@ export const NavbarMenu = styled.ul`
   column-gap: var(--gap-sm);
   justify-content: flex-end;
 
-  @media (max-width: ${breakpoints.small}) {
+  @media (max-width: ${breakpoints.sm}) {
     display: none;
 
     &.active {
@@ -40,7 +42,9 @@ export const NavbarMenu = styled.ul`
       margin-left: -215px;
       padding: var(--gap-lg) var(--gap-xl);
       animation: fade-down 0.3s forwards;
-      border-radius: 3px;
+
+      ${border.radius}
+
       > ul {
         display: flex;
         flex-direction: column;
@@ -58,12 +62,8 @@ export const NavbarMenu = styled.ul`
 
 export const NavbarMenuLink = styled.a`
   color: white;
-  transition: 0.3s;
 
-  &:hover {
-    color: ${colors.primary};
-    transition: 0.3s;
-  }
+  ${hover.link}
 
   &.active {
     color: ${colors.primary};
@@ -75,16 +75,19 @@ export const NavbarMenuMobileToggle = styled.span`
   justify-content: end;
   cursor: pointer;
   animation: fade-down 0.5s forwards;
+
   > span {
     display: none;
   }
-  @media (max-width: ${breakpoints.small}) {
+
+  @media (max-width: ${breakpoints.sm}) {
     > span {
       display: block;
       box-sizing: initial;
       transition: 0.3s;
       height: 30px;
       cursor: pointer;
+
       :after,
       :before {
         content: "";
@@ -94,6 +97,7 @@ export const NavbarMenuMobileToggle = styled.span`
         border-radius: 5px;
         transition: 0.3s;
       }
+
       :after {
         margin-top: var(--gap);
         box-shadow: 0 12px 0 0 white;

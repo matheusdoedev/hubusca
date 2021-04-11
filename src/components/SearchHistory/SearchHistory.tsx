@@ -3,10 +3,10 @@ import { Container, Row, Col } from "react-bootstrap";
 import Link from "next/link";
 
 import Navbar from "../Navbar/Navbar";
+import Loading from "../Loading/Loading";
 
 import { useGetSearchHistory } from "../../data/hooks/useGetSearchHistory";
 
-import Loading from "../Loading/Loading";
 import * as S from "./SearchHistory.styles";
 
 const CardUser = lazy(() => import("../CardUser/CardUser"));

@@ -12,7 +12,7 @@ function Navbar({ navLinks }) {
   const { pathname } = useRouter();
 
   return (
-    <N.Navbar>
+    <N.Navbar title="Navegação">
       <Container>
         <Row className="align-items-center">
           <Col
