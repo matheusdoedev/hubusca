@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { colors } from "../../styles/settings/colors";
+import { breakpoints } from "../../styles/tools/breakpoints";
 
 export const CardRepositorieBlock = styled.article`
   background: ${colors.secondary2};
@@ -17,6 +18,10 @@ export const CardRepositorieBlock = styled.article`
     border: 1px solid ${colors.primary};
     cursor: pointer;
     transition: 0.3s;
+  }
+
+  @media (max-width: ${breakpoints.sm}) {
+    padding: calc(var(--gap-xs) - 1px);
   }
 `;
 
@@ -41,10 +46,18 @@ export const CardRepositorieDescription = styled.p`
 export const CardRepositorieFooter = styled.div`
   display: flex;
   justify-content: space-between;
-  width: calc(100% - 56px);
+  width: 88%;
 
   position: absolute;
   bottom: 32px;
+
+  @media (max-width: ${breakpoints.sm}) {
+    width: 91%;
+  }
+
+  @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
+    width: 91%;
+  }
 `;
 
 export const CardRepositorieLang = styled.span<{ lang: string }>`
@@ -98,4 +111,14 @@ export const CardRepositorieFooterInfo = styled.span`
   color: white;
   font-size: 0.75rem;
   opacity: 0.6;
+
+  &:first-child {
+    @media (max-width: ${breakpoints.sm}) {
+      text-align: left !important;
+    }
+  }
+
+  &:last-child {
+    text-align: right !important;
+  }
 `;

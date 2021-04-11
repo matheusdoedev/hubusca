@@ -17,7 +17,7 @@ export default function UserRepositories(props: { repos: IRepositorie[] }) {
         <Row style={{ rowGap: "var(--gap-sm)" }}>
           {props.repos?.length > 0 ? (
             props.repos.map((repo) => (
-              <Col key={repo.id} xs={12} sm={6}>
+              <Col key={repo.id} xs={12} lg={6}>
                 <CardRepositorie repo={repo} />
               </Col>
             ))

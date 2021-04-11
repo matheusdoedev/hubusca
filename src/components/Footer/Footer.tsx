@@ -31,7 +31,7 @@ function Footer({ navLinks }) {
           </F.FooterNav>
         </Row>
         <Row className="justify-content-center">
-          <F.FooterCopy className="col-xs-12">
+          <F.FooterCopy className="col-12">
             HUBusca 2021 @ Todos os direitos reservados. Feito por matheusdoedev
           </F.FooterCopy>
         </Row>

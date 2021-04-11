@@ -27,7 +27,7 @@ export default function SearchHistory() {
         <Row style={{ rowGap: "var(--gap-sm)" }}>
           {users && users.length > 0 ? (
             users.map((user) => (
-              <Col key={user.id} xs={12} sm={6}>
+              <Col key={user.id} xs={12} lg={6}>
                 <Suspense fallback={<Loading />}>
                   <CardUser user={user} />
                 </Suspense>

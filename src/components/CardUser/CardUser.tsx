@@ -8,7 +8,7 @@ const CardUser: React.FC<{ user: IUser }> = ({ user }) => {
   return (
     <Link href={`/user/${user.login}`}>
       <C.CardUserBlock>
-        <img src={user.avatar_url} alt="User" title="User" />
+        <C.CardUserAvatar src={user.avatar_url} alt="User" title="User" />
         <C.CardUserContent>
           <C.CardUserContentInfo>
             <C.CardUserContentInfoSpan>Nome</C.CardUserContentInfoSpan>

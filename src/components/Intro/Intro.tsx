@@ -16,7 +16,7 @@ export default function Intro() {
       <Navbar />
       <Container>
         <Row style={{ height: "80vh", alignItems: "center" }}>
-          <Col as="section" title="Introdução" sm={12} md={6}>
+          <Col as="section" title="Introdução" sm={12} lg={6}>
             <I.IntroTitle title="Seu buscador de usuários do Github">
               Seu buscador de usuários do Github
             </I.IntroTitle>

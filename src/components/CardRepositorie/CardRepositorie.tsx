@@ -50,10 +50,10 @@ export default function CardRepositorie(props: { repo: IRepositorie }) {
               {props.repo?.language}
             </C.CardRepositorieLang>
           )}
-          <C.CardRepositorieFooterInfo>
+          <C.CardRepositorieFooterInfo style={{ textAlign: "center" }}>
             Criado em 25/03/2020
           </C.CardRepositorieFooterInfo>
-          <C.CardRepositorieFooterInfo>
+          <C.CardRepositorieFooterInfo style={{ textAlign: "right" }}>
             {updateThereMessage}
           </C.CardRepositorieFooterInfo>
         </C.CardRepositorieFooter>

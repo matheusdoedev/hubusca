@@ -19,7 +19,8 @@ export default function Resultado() {
         <Row>
           <Col
             sm={12}
-            md={{ offset: 3, span: 6 }}
+            lg={{ offset: 2, span: 8 }}
+            xl={{ offset: 3, span: 6 }}
             style={{
               display: "flex",
               flexDirection: "column",
