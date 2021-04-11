@@ -2,34 +2,28 @@ import Image from "next/image";
 
 import { IRepositorie } from "../../data/interfaces/Repositorie";
 
+import { getDifferenceBetweenTwoDates } from "../../utils/getDifferenceBetweenTwoDates";
+import { getUpdateThereMessage } from "../../utils/getUpdateThereMessage";
+import { parseDateInFormat } from "../../utils/parseDateInFormat";
+
 import * as C from "./CardRepositorie.styles";
 
 export default function CardRepositorie(props: { repo: IRepositorie }) {
-  const updateThere = Math.round(
-    (new Date().getTime() - new Date(props.repo?.pushed_at).getTime()) /
-      1000 /
-      60 /
-      60 /
-      24
+  const updateThereMessage: string = getUpdateThereMessage(
+    getDifferenceBetweenTwoDates(new Date(), new Date(props.repo?.pushed_at))
   );
-
-  let updateThereMessage: string = "";
-
-  if (updateThere === 0) {
-    updateThereMessage = "Atualizado hoje";
-  } else if (updateThere === 1) {
-    updateThereMessage = "Atualizado há 1 dia";
-  } else if (updateThere > 1 && updateThere <= 30) {
-    updateThereMessage = `Atualizado há ${updateThere} dias`;
-  } else if (updateThere > 30 && updateThere <= 60) {
-    updateThereMessage = `Atualizado há 1 mês`;
-  } else {
-    updateThereMessage = `Atualizado há ${Math.round(updateThere / 30)} meses`;
-  }
+  const createdAtMessage = `Criado em ${parseDateInFormat(
+    props.repo?.created_at
+  )}`;
 
   return (
-    <a style={{ padding: "0" }} href={props.repo.html_url} target="BLANK">
-      <C.CardRepositorieBlock>
+    <a
+      style={{ padding: "0" }}
+      href={props.repo?.html_url}
+      target="BLANK"
+      title={props.repo?.name}
+    >
+      <C.CardRepositorieBlock title={props.repo?.name}>
         <C.CardRepositorieTitleBlock>
           <Image
             src="/assets/book.svg"
@@ -51,7 +45,7 @@ export default function CardRepositorie(props: { repo: IRepositorie }) {
             </C.CardRepositorieLang>
           )}
           <C.CardRepositorieFooterInfo style={{ textAlign: "center" }}>
-            Criado em 25/03/2020
+            {createdAtMessage}
           </C.CardRepositorieFooterInfo>
           <C.CardRepositorieFooterInfo style={{ textAlign: "right" }}>
             {updateThereMessage}
