@@ -1,9 +1,8 @@
 import { IRepositorie } from "../data/interfaces/Repositorie";
+
 import { IUser } from "../data/interfaces/User";
 
 export function storeUserHistory(data: IUser, repos: IRepositorie[]) {
-  console.log(repos);
-
   if (sessionStorage.getItem("usersHistory")) {
     const old_data = JSON.parse(sessionStorage.getItem("usersHistory"));
 

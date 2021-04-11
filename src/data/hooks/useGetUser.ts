@@ -1,11 +1,11 @@
 import { useState, FormEvent } from "react";
-import { useRouter } from "next/router";
 
 import { githubApi } from "../../services/githubApi";
 
 import { IUser } from "../interfaces/User";
 
 import { storeUserHistory } from "../../utils/storeUserHistory";
+import { smoothScroll } from "../../utils/smoothScroll";
 
 export function useGetUser(
   userLogin: string,
@@ -13,11 +13,12 @@ export function useGetUser(
 ) {
   const [status, setStatus] = useState<"INACTIVE" | "LOADING">("INACTIVE");
   const [error, setError] = useState<string>();
-  const history = useRouter();
 
   async function handleGetUser(e: FormEvent) {
     e.preventDefault();
-    history.push("/#resultado");
+
+    smoothScroll("resultado");
+
     setUser(null);
     setError("");
     setStatus("LOADING");
@@ -25,7 +26,7 @@ export function useGetUser(
     const repos = await githubApi
       .get(`users/${userLogin}/repos`)
       .then((r) => r.data)
-      .catch((err) => {
+      .catch(() => {
         setError("Usuário não encontrado");
         setStatus("INACTIVE");
       });
