@@ -48,6 +48,7 @@ yarn build
 - [Axios](https://github.com/axios/axios)
 - [React-Bootstrap](https://react-bootstrap.github.io/)
 - [Bootstrap](https://getbootstrap.com/)
+- [React-Spinners](https://github.com/davidhu2000/react-spinners)
 
 ## Meta
 
