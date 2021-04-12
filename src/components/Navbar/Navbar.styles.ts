@@ -23,24 +23,20 @@ export const NavbarBrand = styled.section`
   justify-content: center;
 `;
 
-export const NavbarMenu = styled.ul`
-  display: flex;
-  column-gap: var(--gap-sm);
-  justify-content: flex-end;
-
-  @media (max-width: ${breakpoints.sm}) {
+export const NavbarNav = styled.nav`
+  @media (max-width: ${breakpoints.md}) {
     display: none;
 
     &.active {
       display: block;
-      background: white;
+      background: ${colors.secondary2};
       width: 320px;
       position: absolute;
       top: 60px;
       left: 50%;
       z-index: 10;
       margin-left: -215px;
-      padding: var(--gap-lg) var(--gap-xl);
+      padding: var(--gap-sm) var(--gap-sm);
       animation: fade-down 0.3s forwards;
 
       ${border.radius}
@@ -49,8 +45,10 @@ export const NavbarMenu = styled.ul`
         display: flex;
         flex-direction: column;
         align-items: center;
+
         > li {
           margin-bottom: var(--gap-sm);
+          text-align: center;
         }
         > li:last-child {
           margin-bottom: 0;
@@ -58,6 +56,12 @@ export const NavbarMenu = styled.ul`
       }
     }
   }
+`;
+
+export const NavbarMenu = styled.ul`
+  display: flex;
+  column-gap: var(--gap-sm);
+  justify-content: flex-end;
 `;
 
 export const NavbarMenuLink = styled.a`
@@ -71,8 +75,8 @@ export const NavbarMenuLink = styled.a`
 `;
 
 export const NavbarMenuMobileToggle = styled.span`
-  display: -webkit-box;
-  justify-content: end;
+  display: flex;
+  justify-content: flex-end;
   cursor: pointer;
   animation: fade-down 0.5s forwards;
 
@@ -80,9 +84,10 @@ export const NavbarMenuMobileToggle = styled.span`
     display: none;
   }
 
-  @media (max-width: ${breakpoints.sm}) {
+  @media (max-width: ${breakpoints.md}) {
     > span {
-      display: block;
+      display: flex;
+      flex-direction: column;
       box-sizing: initial;
       transition: 0.3s;
       height: 30px;
@@ -93,16 +98,17 @@ export const NavbarMenuMobileToggle = styled.span`
         content: "";
         display: block;
         width: 40px;
-        border: 2px solid white;
-        border-radius: 5px;
+        border: 1px solid white;
+
         transition: 0.3s;
       }
 
       :after {
         margin-top: var(--gap);
-        box-shadow: 0 12px 0 0 white;
+        box-shadow: 0 10px 0 0 white;
       }
     }
+
     &.active > span {
       :after {
         box-shadow: none;
