@@ -5,7 +5,6 @@ import { githubApi } from "../../services/githubApi";
 import { IUser } from "../interfaces/User";
 
 import { storeUserHistory } from "../../utils/storeUserHistory";
-import { smoothScroll } from "../../utils/smoothScroll";
 
 export function useGetUser(
   userLogin: string,

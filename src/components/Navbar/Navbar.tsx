@@ -21,12 +21,12 @@ function Navbar({ navLinks }) {
         <Row className="align-items-center">
           <Col
             className="d-flex justify-content-center col-4"
-            xs={4}
+            xs={5}
             md={{ offset: 4, span: 4 }}
           >
             <Brand />
           </Col>
-          <Col xs={8} md={4}>
+          <Col xs={7} md={4}>
             <N.NavbarNav data-mobile="menu">
               <N.NavbarMenu>
                 {navLinks.map(({ path, label }, index: number) => (

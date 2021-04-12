@@ -33,7 +33,7 @@ export const NavbarNav = styled.nav`
       width: 320px;
       position: absolute;
       top: 60px;
-      left: 50%;
+      left: 40%;
       z-index: 10;
       margin-left: -215px;
       padding: var(--gap-sm) var(--gap-sm);
