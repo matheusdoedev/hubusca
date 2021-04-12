@@ -1,4 +1,4 @@
-import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap-grid.min.css";
 
 import { Animations } from "../styles/settings/animations";
 import { Reset } from "../styles/generic/reset";
