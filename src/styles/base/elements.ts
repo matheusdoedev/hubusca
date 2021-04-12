@@ -62,7 +62,8 @@ export const Elements = createGlobalStyle`
 
   input,
   select,
-  span {
+  span,
+  label {
     ${fonts.fontSecondary};
     font-size: 0.875rem;
     font-weight: 400;

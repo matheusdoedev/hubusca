@@ -1,15 +1,14 @@
-import { useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
+import Button from "../Button/Button";
 import Navbar from "../Navbar/Navbar";
-import SearchForm from "../SearchForm/SearchForm";
 
-import { UserContext } from "../../data/contexts/UserContext";
+import useSmoothScroll from "../../data/hooks/useSmoothScroll";
 
 import * as I from "./Intro.styles";
 
 export default function Intro() {
-  const userContext = useContext(UserContext);
+  useSmoothScroll();
 
   return (
     <I.Intro title="Introdução">
@@ -20,7 +19,12 @@ export default function Intro() {
             <I.IntroTitle title="Seu buscador de usuários do Github">
               Seu buscador de usuários do Github
             </I.IntroTitle>
-            <SearchForm error={userContext?.error} />
+            <Button
+              buttonType="Link"
+              href="#resultado"
+              data-smooth-scroll="resultado"
+              content="Bora começar!"
+            />
           </Col>
         </Row>
       </Container>
