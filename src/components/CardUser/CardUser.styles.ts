@@ -43,7 +43,6 @@ export const CardUserContent = styled.section`
   grid-template-columns: 1fr 1fr;
   column-gap: var(--gap-sm);
   row-gap: var(--gap-sm);
-  align-items: center;
 `;
 
 export const CardUserContentInfo = styled.div``;
