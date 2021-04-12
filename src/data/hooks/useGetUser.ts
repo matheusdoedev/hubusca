@@ -17,8 +17,6 @@ export function useGetUser(
   async function handleGetUser(e: FormEvent) {
     e.preventDefault();
 
-    smoothScroll("resultado");
-
     setUser(null);
     setError("");
     setStatus("LOADING");

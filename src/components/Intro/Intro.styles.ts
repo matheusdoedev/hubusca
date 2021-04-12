@@ -19,16 +19,8 @@ export const IntroTitle = styled.h1`
     height: 1px;
     background: white;
     opacity: 0.2;
-    margin: var(--gap-md) 0;
+    margin: var(--gap-md) 0 calc(var(--gap-lg) - 8px) 0;
 
     ${border.radius}
   }
-`;
-
-export const SearchForm = styled.form`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  width: 100%;
-  column-gap: var(--gap-xs);
 `;
