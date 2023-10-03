@@ -1,74 +1,75 @@
-# HUBusca
+# Nuxt 3 Minimal Starter
 
-A Github user search
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-![Repo Size][repo-size]
-![Top Languages][top-languages]
-![Repo License][repo-license]
-![Repo Version][repo-version]
-![Personal Site][matheus-img]
+## Setup
 
-## Get Started
+Make sure to install the dependencies:
 
-Install dependencies:
-
-```sh
+```bash
+# npm
 npm install
 
-yarn
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+
+# bun
+bun install
 ```
 
-Development:
+## Development Server
 
-```sh
+Start the development server on `http://localhost:3000`:
+
+```bash
+# npm
 npm run dev
 
+# pnpm
+pnpm run dev
+
+# yarn
 yarn dev
+
+# bun
+bun run dev
 ```
 
-Build:
+## Production
 
-```sh
+Build the application for production:
+
+```bash
+# npm
 npm run build
 
+# pnpm
+pnpm run build
+
+# yarn
 yarn build
+
+# bun
+bun run build
 ```
 
-## About
+Locally preview production build:
 
-- HUBusca is a solution for make easy to search a user on Github
-- Is a website made with Next.js
+```bash
+# npm
+npm run preview
 
-### Technologies
+# pnpm
+pnpm run preview
 
-- [Next.js](https://nextjs.org/)
-- [React.js](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Styled Components](https://styled-components.com/)
-- [Axios](https://github.com/axios/axios)
-- [React-Bootstrap](https://react-bootstrap.github.io/)
-- [Bootstrap](https://getbootstrap.com/)
-- [React-Spinners](https://github.com/davidhu2000/react-spinners)
+# yarn
+yarn preview
 
-## Meta
+# bun
+bun run preview
+```
 
-Authors:
-
-- [Matheus do É Santos](https://www.linkedin.com/in/matheusdoe-dev/)
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
-
-<!-- Markdown link & img dfn's -->
-
-[top-languages]: https://img.shields.io/github/languages/top/matheusdoedev/hubusca?style=flat-square
-[repo-size]: https://img.shields.io/github/repo-size/matheusdoedev/hubusca?style=flat-square
-[repo-license]: https://img.shields.io/github/license/matheusdoedev/hubusca?style=flat-square
-[repo-version]: https://img.shields.io/github/package-json/v/matheusdoedev/hubusca?style=flat-square
-[matheus-img]: https://img.shields.io/badge/-matheusdoe.dev-%23811662?style=flat-square
-[matheus-url]: https://matheusdoe.com
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
